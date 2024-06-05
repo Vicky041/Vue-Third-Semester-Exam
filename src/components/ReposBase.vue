@@ -39,7 +39,9 @@ export default {
       }
     },
     nextPage() {
-      this.currentPage++
+      if (this.currentPage < this.lastPage) {
+        this.currentPage++;
+      }
     }
   },
   mounted() {
