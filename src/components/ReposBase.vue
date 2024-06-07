@@ -48,7 +48,7 @@ export default {
     this.fetchData()
   },
   computed: {
-    showMore: function () {
+    viewMore: function () {
       let start = (this.currentPage - 1) * this.perPage
       let end = start + this.perPage
       this.loading = false
@@ -69,7 +69,7 @@ export default {
       <div class="repo-container" v-if="loading">
         <SkeletonBase v-for="n in skeleton" :key="n">{{ skeleton }}</SkeletonBase>
       </div>
-      <div v-else v-for="repo in showMore" class="repo-card" :key="repo.id">
+      <div v-else v-for="repo in viewMore" class="repo-card" :key="repo.id">
         <router-link :to="`/details/${repo.name}`"
           ><h2 class="repo-name">{{ repo.name }}</h2></router-link
         >

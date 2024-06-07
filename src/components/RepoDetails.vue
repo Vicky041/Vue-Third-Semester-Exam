@@ -75,7 +75,7 @@
             <p v-if="details.language === null">Main Language: none</p>
             <!-- <p v-else="details.language === null">Main Language: {{ details.language }}</p> -->
             <p v-if="deployments.length === 0">Live site: none</p>
-            <p v-else>Live site: <a :href="`https://donsalvy.github.io/${details.name}`">Vicky041.github.io/{{ details.name }}</a></p>
+            <p v-else>Live site: <a :href="`https://Vicky041.github.io/${details.name}`">Vicky041.github.io/{{ details.name }}</a></p>
             <p><a :href="`https://github.com/${details.full_name}`">View on Github</a></p>
         </div>
     </div>
